@@ -1,0 +1,6 @@
+import binascii
+import base64
+
+unhexed = binascii.unhexlify('49276d206b696c6c696e6720796f757220627261696e206c696b65206120706f69736f6e6f7573206d757368726f6f6d')
+based = base64.b64encode(unhexed)
+assert based == b'SSdtIGtpbGxpbmcgeW91ciBicmFpbiBsaWtlIGEgcG9pc29ub3VzIG11c2hyb29t'
