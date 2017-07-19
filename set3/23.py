@@ -1,12 +1,9 @@
-import itertools
-import operator
-
 from z3 import *
 from set3.utilz import MT19937
 
 
 def temper(y):
-    # only user for verification 
+    # only used for verification
     y = y ^ ((y >> MT19937.u) & MT19937.d)
     y = y ^ ((y << MT19937.s) & MT19937.b)
     y = y ^ ((y << MT19937.t) & MT19937.c)
